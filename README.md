@@ -25,16 +25,19 @@ To Visit App:
 localhost:3000/ideas
 
 AWS DEPLOY 
-ubuntu@ec2-34-227-17-197.compute-1.amazonaws.com
-cd /opt/back-end && sudo sudo git reset --hard @{u}
-cd /opt/back-end && sudo git pull https://github.com/credevexp/api-aws-test.git
+https://aws.amazon.com/console/
+ubuntu@ec2-3-87-68-249.compute-1.amazonaws.com
+sudo git clone https://github.com/credevexp/api-basiq.git /opt/back-end
 cd /opt/back-end && sudo npm install
-cd /opt/back-end && sudo npm i
-cd /opt/back-end && sudo npm start
-cd /opt/front-end && sudo sudo git reset --hard @{u}
-cd /opt/front-end && sudo git pull https://github.com/credevexp/ui-aws-test.git
+sudo pm2 start server.js
+sudo git clone https://github.com/credevexp/ui-basiq.git /opt/front-end
+cd /opt/front-end && sudo git reset --hard @{u}
+cd /opt/front-end && sudo git pull
 cd /opt/front-end && sudo npm install
-cd /opt/front-end && sudo npm run build
+sudo npm run build
+sudo rm /etc/nginx/sites-available/default
+sudo vi /etc/nginx/sites-available/default
 sudo systemctl restart nginx
+systemctl status nginx.service
 
 REFLECTION

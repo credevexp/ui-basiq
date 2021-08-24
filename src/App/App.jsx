@@ -10,6 +10,7 @@ import { LoginPage } from "../LoginPage";
 import { RegisterPage } from "../RegisterPage";
 import { AffordabilityPage } from "../AffordabilityPage";
 import { WelcomePage } from "../WelcomePage";
+import { InstitutionsPage } from "../InstitutionsPage";
 
 class App extends React.Component {
   constructor(props) {
@@ -46,6 +47,7 @@ class App extends React.Component {
                 <Route path="/login" component={LoginPage} />
                 <Route path="/register" component={RegisterPage} />
                 <Route path="/affordability" component={AffordabilityPage} />
+                <Route path="/institutions" component={InstitutionsPage} />
                 <Redirect from="*" to="/" />
               </Switch>
             </Router>
